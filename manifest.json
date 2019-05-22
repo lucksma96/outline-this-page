@@ -1,13 +1,19 @@
 {
+    "manifest_version": 2,
     "name": "Outline This Page",
-    "version": "1.0",
-    "description": "Outline This Page was made to \"Outline\" pages in one click. Note: this may not aways work.",
-    "background": {
-      "scripts": ["background.js"],
-      "persistent": false
-    },
+    "version": "1.1",
+    "description": "",
+    "icons": {},
     "browser_action": {
         "default_title": "Outline This Page"
     },
-    "manifest_version": 2
-  }
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "permissions": [
+        "tabs"
+    ]
+}
