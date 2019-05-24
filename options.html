@@ -3,16 +3,38 @@
 
 <head>
     <title>OTP options</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="options.js"></script>
 </head>
 
 <body>
-    <label for="chk-new-tab">Outline in new tab</label>
-    <input type="checkbox" name="chk-new-tab" id="chk-new-tab">
-
-    <div id="status"></div>
-    <button id="btn-save">Save</button>
-
-    <script src="options.js"></script>
+    <nav class="navbar navbar-light bg-light">
+        <span class="navbar-brand">
+            <img src="images/otp128.png" width="32" height="32" class="d-inline-block align-top" alt="">
+            Outline This Page
+        </span>
+    </nav>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Options</h3>
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="chkNewTab">
+                            <label class="custom-control-label" for="chkNewTab">Outline in new tab</label>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button type="button" class="btn btn-primary" id="btnSave">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="alert alert-success fixed-bottom w-50 mx-auto d-none" role="alert" id="status">
+        Saved!
+    </div>
 </body>
 
 </html>

@@ -1,10 +1,15 @@
 {
     "manifest_version": 2,
     "name": "Outline This Page",
-    "version": "1.1",
+    "version": "1.2",
     "description": "",
     "options_page": "options.html",
-    "icons": {},
+    "icons": {
+        "16": "images/otp16.png",
+        "32": "images/otp32.png",
+        "48": "images/otp48.png",
+        "128": "images/otp128.png"
+    },
     "browser_action": {
         "default_title": "Outline This Page"
     },

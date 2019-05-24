@@ -1,21 +1,22 @@
 function save() {
-    const newTab = document.getElementById('chk-new-tab').checked;
+    const newTab = document.getElementById('chkNewTab').checked;
     chrome.storage.sync.set(
         { newTab: newTab },
         () => {
             const status = document.getElementById('status');
-            status.textContent = 'Options saved.';
-            setTimeout(() => { status.textContent = ''; }, 1500);
+            status.classList.replace('d-none', 'd-block');
+            setTimeout(() => { status.classList.replace('d-block', 'd-none'); }, 1500);
         }
     );
 }
 
 function restore() {
+    document.getElementById('btnSave').addEventListener('click', save);
+
     chrome.storage.sync.get(
         { newTab: false },
-        (items) => document.getElementById('chk-new-tab').checked = items.newTab
+        (items) => document.getElementById('chkNewTab').checked = items.newTab
     );
 }
 
 document.addEventListener('DOMContentLoaded', restore);
-document.getElementById('btn-save').addEventListener('click', save);

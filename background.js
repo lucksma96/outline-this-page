@@ -1,6 +1,6 @@
 chrome.browserAction.onClicked.addListener((tab) => {
-    chrome.storage.sync.get(['newTab'], (newTab) => {
-        if (newTab) {
+    chrome.storage.sync.get(['newTab'], (result) => {
+        if (result.newTab) {
             chrome.tabs.create({
                 url: `https://outline.com/${tab.url}`,
                 openerTabId: tab.id
